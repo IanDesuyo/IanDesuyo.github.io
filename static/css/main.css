@@ -1,0 +1,151 @@
+body {
+  margin: 0 0;
+  background-color: #1d1c1c;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+* {
+  font-family: "Noto Sans TC", "Segoe UI";
+}
+
+#particles-js {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -100;
+}
+
+.wrapper {
+  border-radius: 5% 5%;
+  position: absolute;
+  top: 20vh;
+  bottom: 20vh;
+  left: 30vw;
+  right: 30vw;
+  color: #ffffff;
+  -webkit-transition: background-color 1.4s ease-in-out;
+  transition: background-color 1.4s ease-in-out;
+}
+
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    border-radius: 3% 3% 0% 0%;
+    top: 15vh;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    -webkit-transition: top 0.6s ease-in-out, border-radius 0.4s ease-in-out, background-color 1s ease-in-out;
+    transition: top 0.6s ease-in-out, border-radius 0.4s ease-in-out, background-color 1s ease-in-out;
+  }
+
+  .wrapper-full {
+    border-radius: 0% 0%;
+    top: 0;
+  }
+
+  .avatar {
+    margin-top: -10vh !important;
+  }
+}
+
+.container {
+  margin: 3vh 2%;
+}
+
+.avatar {
+  border-radius: 50% 50%;
+  margin-top: -9vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+}
+
+.avatar:hover {
+  -webkit-transform: rotate(3600deg);
+  transform: rotate(3600deg);
+}
+
+.container p {
+  font-size: large;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: rgb(29, 29, 29);
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.flex-item {
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 0px 0.2em;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+
+.logo:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.anilist {
+  height: 48px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 96%;
+  bottom: 3vh;
+}
+
+.page-right {
+  margin-left: auto;
+}
+
+.nyaa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("/static/nyaa.gif");
+  background-repeat: repeat;
+}
+
+.overflow {
+  width: 98%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.overflow:hover {
+  white-space: normal;
+  overflow: visible;
+}
