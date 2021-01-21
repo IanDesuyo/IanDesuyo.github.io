@@ -1,4 +1,5 @@
 var isMobile = !!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+
 $(document).ready(function () {
   isMobile || particlesJS.load("particles-js", "/static/particles.json"),
     setTimeout(function () {
@@ -9,8 +10,9 @@ $(document).ready(function () {
     console.log($(this).attr("page")), changePage($(this).attr("page"));
   }),
   $(".discord").click(function () {
-    alert("add me on Discord: @Ian#5898");
+    alert("@Ian#5898");
   });
+
 function changePage(a) {
   if (1 == a)
     set_hello(), $(".wrapper").removeClass("wrapper-full"), $(".wrapper").css("background-color", "rgb(0, 92, 175)");
@@ -31,22 +33,25 @@ function changePage(a) {
       $(".page-" + a).fadeIn(400);
     }, 500);
 }
+
 function set_hello() {
   const a = [
     "Hello, there!",
     "Hi, there!",
-    "\u4F60\u597D!",
-    "\u3053\u3093\u306B\u3061\u306F!",
-    "\u3061\u3047\u308B\uFF5E",
+    "你好!",
+    "こんにちは!",
+    "こんばんドドド~",
   ];
   let b;
   do b = a[Math.floor(Math.random() * a.length)];
   while (b === $(".hello").text());
   $(".hello").text(b);
 }
+
 $(".404").click(function () {
   $(".err-title").text(parseInt($(".err-title").text()) + 1);
 });
+
 let cache = [0],
   keys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 $("body").keydown(function (a) {
