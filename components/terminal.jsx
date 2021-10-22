@@ -9,7 +9,7 @@ const Terminal = ({ lines }) => {
             <Text textColor="#98C379">ian@ubuntu</Text>
             <Text>:</Text>
             <Text textColor="#61AFEF">~</Text>
-            <Text>{text}</Text>
+            <Text>$ {text}</Text>
           </Box>
         ) : (
           <Text as="pre" key={index}>

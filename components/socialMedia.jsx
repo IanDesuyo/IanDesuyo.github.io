@@ -1,4 +1,4 @@
-import { Stack, Button, Icon, Link } from "@chakra-ui/react";
+import { Wrap, Button, Icon, Link } from "@chakra-ui/react";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { SiAnilist } from "react-icons/si";
 import { BsDiscord } from "react-icons/bs";
@@ -11,21 +11,23 @@ const LinkButton = ({ icon, url, text }) => {
         ":hover": { textDecoration: "none" },
       }}
     >
-      <Button leftIcon={icon}>{text}</Button>
+      <Button leftIcon={icon} w="100px">
+        {text}
+      </Button>
     </Link>
   );
 };
 
 const SocialMedia = () => {
   return (
-    <Stack direction="row">
+    <Wrap spacing={3}>
       <LinkButton
         icon={<Icon as={AiFillGithub} />}
         url="https://github.com/IanDesuyo"
         text="Github"
       />
       <LinkButton icon={<Icon as={AiOutlineMail} />} url="mailto:ian@randosoru.me" text="Email" />
-      <Button leftIcon={<Icon as={BsDiscord} />} onClick={() => alert("Ian#5898")}>
+      <Button leftIcon={<Icon as={BsDiscord} />} w="100px" onClick={() => alert("Ian#5898")}>
         Discord
       </Button>
       <LinkButton
@@ -33,7 +35,7 @@ const SocialMedia = () => {
         url="https://anilist.co/user/IanDesuyo"
         text="AniList"
       />
-    </Stack>
+    </Wrap>
   );
 };
 
