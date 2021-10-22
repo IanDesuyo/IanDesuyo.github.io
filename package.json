@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
-    "prestart": "next build",
-    "start": "next start"
+    "start": "next build && next start",
+    "export": "next build && next export"
   },
   "author": "IanDesuyo",
   "license": "MIT",
