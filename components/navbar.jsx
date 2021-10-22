@@ -15,10 +15,6 @@ const links = [
     path: "/projects",
     name: "Projects",
   },
-  {
-    path: "/404",
-    name: "404",
-  },
 ];
 
 const Navbar = props => {
