@@ -9,7 +9,8 @@ const variants = {
 };
 
 const NavLink = ({ href, path, children, ...props }) => {
-  const active = path === href;
+  const rootPath = path.split("/")[1];
+  const active = `/${rootPath}` === href;
 
   return (
     <AnimatePresence exitBeforeEnter initial={false}>

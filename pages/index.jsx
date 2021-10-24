@@ -16,13 +16,11 @@ import Head from "../components/head.jsx";
 const textVariants = {
   hidden: { x: -40, opacity: 0 },
   enter: { x: 0, opacity: 1 },
-  exit: { x: -40, opacity: 0 },
 };
 
 const avatarVariants = {
   hidden: { x: 40, opacity: 0 },
   enter: { x: 0, opacity: 1 },
-  exit: { x: 40, opacity: 0 },
 };
 
 const terminalVariants = {
@@ -46,7 +44,7 @@ const catAbout = [
   { isInput: false, text: "  - English  70%" },
   { isInput: false, text: "  - Japanese 30%" },
   { isInput: false, text: "Hobbies:" },
-  { isInput: false, text: "  - HoloLive" },
+  { isInput: false, text: "  - HoloLive🐏" },
   { isInput: false, text: "  - J-POP" },
   { isInput: false, text: "  - Anime" },
   { isInput: false, text: "  - Coding" },
@@ -55,10 +53,14 @@ const catAbout = [
   { isInput: false, text: "requests\nbeautifulsoup4\nopencv-python\ndiscord.py\nfastapi" },
   { isInput: false, text: "\n" },
   { isInput: true, text: "npm list" },
+  { isInput: false, text: "+-- typescript" },
   { isInput: false, text: "+-- react" },
   { isInput: false, text: "+-- react-dom" },
   { isInput: false, text: "+-- @material-ui/core" },
   { isInput: false, text: "`-- @chakra-ui/react" },
+  { isInput: false, text: "\n" },
+  { isInput: true, text: "docker ps" },
+  { isInput: false, text: "mysql/mysql-server\nmongo\nnginx" },
 ];
 
 const Index = () => {
@@ -79,7 +81,6 @@ const Index = () => {
               <motion.div
                 initial="hidden"
                 animate="enter"
-                exit="exit"
                 variants={textVariants}
                 transition={transition}
                 key={index}
@@ -93,9 +94,8 @@ const Index = () => {
           <motion.div
             initial="hidden"
             animate="enter"
-            exit="exit"
             variants={avatarVariants}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            transition={{ delay: 0.3, duration: 1 }}
             whileHover={{ scale: 1.1, rotateX: 20, rotateY: -20 }}
           >
             <Center h="100%">
@@ -113,10 +113,10 @@ const Index = () => {
       </Container>
 
       <svg
-        class="wave-warpper"
+        className="wave-warpper"
         viewBox="0 24 150 28"
         preserveAspectRatio="none"
-        shape-rendering="auto"
+        shapeRendering="auto"
       >
         <defs>
           <path

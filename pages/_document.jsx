@@ -1,9 +1,11 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { ColorModeScript } from "@chakra-ui/react";
 
 const Document = () => {
   return (
     <Html>
       <Head>
+        <ColorModeScript initialColorMode="dark" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q70MBNQHR" />
         <script
           dangerouslySetInnerHTML={{
