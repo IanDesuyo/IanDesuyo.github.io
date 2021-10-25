@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import Transition from "../../components/transition.jsx";
 import Head from "../../components/head.jsx";
 
-const Index = () => {
+const Projects = () => {
   const [repos, setRepos] = useState([]);
   const pinned = ["AIKyaru", "YoutubeMusicLyrics"];
 
@@ -42,7 +42,7 @@ const Index = () => {
 
       result.sort((a, b) => b.stars - a.stars);
 
-      setTimeout(() => setRepos([...pinnedResult, ...result]), 1000);
+      setRepos([...pinnedResult, ...result]);
     });
   }, []);
   return repos.length > 0 ? (
@@ -91,4 +91,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Projects;

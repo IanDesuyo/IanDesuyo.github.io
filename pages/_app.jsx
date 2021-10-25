@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps, router }) => {
     <ChakraProvider>
       <Navbar path={router.asPath} />
 
-      <Box minH="100vh">
+      <Box minH="95vh">
         <AnimatePresence exitBeforeEnter initial={true}>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
