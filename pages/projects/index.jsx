@@ -7,8 +7,10 @@ import {
   useColorModeValue,
   Spinner,
   Center,
+  Icon,
 } from "@chakra-ui/react";
-import { LinkIcon, ExternalLinkIcon, StarIcon } from "@chakra-ui/icons";
+import { LinkIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { AiFillStar } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import Transition from "../../components/transition.jsx";
 import Head from "../../components/head.jsx";
@@ -24,6 +26,7 @@ const Projects = () => {
       const pinnedResult = [];
 
       data.forEach(repo => {
+        if (repo.fork) return;
         const isPinned = pinned.includes(repo.name);
         const d = {
           name: repo.name,
@@ -58,7 +61,7 @@ const Projects = () => {
             key={index}
           >
             <Text fontSize="2xl">
-              {repo.pinned && <StarIcon mr={2} w={5} />}
+              {repo.pinned && <Icon as={AiFillStar} mr={2} w={5} />}
               {repo.name}
             </Text>
             <Text>{repo.description}</Text>

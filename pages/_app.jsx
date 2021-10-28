@@ -9,7 +9,7 @@ const MyApp = ({ Component, pageProps, router }) => {
   const handleRouteChange = url => {
     setTimeout(() => {
       // wait until transition is done
-      window.gtag("config", "[Tracking ID]", {
+      window.gtag("config", "G-6Q70MBNQHR", {
         page_path: url,
       });
     }, 1000);
