@@ -26,8 +26,8 @@ const SocialMedia = () => {
         url="https://github.com/IanDesuyo"
         text="Github"
       />
-      <LinkButton icon={<Icon as={AiOutlineMail} />} url="mailto:ian@randosoru.me" text="Email" />
-      <Button leftIcon={<Icon as={BsDiscord} />} w="100px" onClick={() => alert("Ian#5898")}>
+      <LinkButton icon={<Icon as={AiOutlineMail} />} onClick={() => alert("hello [at] 0xian.dev")} />
+      <Button leftIcon={<Icon as={BsDiscord} />} w="100px" onClick={() => alert("iandesuyos")}>
         Discord
       </Button>
       <LinkButton
