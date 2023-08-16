@@ -21,20 +21,14 @@ const LinkButton = ({ icon, url, text }) => {
 const SocialMedia = () => {
   return (
     <Wrap spacing={3}>
-      <LinkButton
-        icon={<Icon as={AiFillGithub} />}
-        url="https://github.com/IanDesuyo"
-        text="Github"
-      />
-      <LinkButton icon={<Icon as={AiOutlineMail} />} onClick={() => alert("hello [at] 0xian.dev")} />
-      <Button leftIcon={<Icon as={BsDiscord} />} w="100px" onClick={() => alert("iandesuyos")}>
+      <LinkButton icon={<Icon as={AiFillGithub} />} url="https://github.com/IanDesuyo" text="Github" />
+      <Button leftIcon={<Icon as={AiOutlineMail} />} onClick={() => alert("hello" + "[at]" + "0xian.dev")}>
+        Email
+      </Button>
+      <Button leftIcon={<Icon as={BsDiscord} />} w="100px" onClick={() => alert("iandesuyo")}>
         Discord
       </Button>
-      <LinkButton
-        icon={<Icon as={SiAnilist} />}
-        url="https://anilist.co/user/IanDesuyo"
-        text="AniList"
-      />
+      <LinkButton icon={<Icon as={SiAnilist} />} url="https://anilist.co/user/IanDesuyo" text="AniList" />
     </Wrap>
   );
 };
