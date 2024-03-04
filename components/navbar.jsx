@@ -8,8 +8,8 @@ const links = [
     name: "Home",
   },
   {
-    path: "/posts",
-    name: "Posts",
+    path: "https://blog.0xian.dev",
+    name: "Blog",
   },
   {
     path: "/projects",
